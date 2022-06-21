@@ -21,8 +21,7 @@ library(moments)
 
 
 ## importing data ####
-setwd("/Users/marco/Desktop/UNIVERSITA/Magistrale/II anno/I sem/Financial Data Science/Project/")
-data <- read.csv('complete_evenMoreEnlarged_dataset.csv', sep = ',')
+data <- read.csv('./dataset.csv', sep = ',')
 data$Date <- as.Date(data$Date)
 data$XLM <-sapply(data$XLM, function(x) ifelse(x>10*mean(data$XLM), x/100, x))
 data$XRP <-sapply(data$XRP, function(x) ifelse(x>10*mean(data$XLM), x/100, x))
